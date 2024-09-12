@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body {
+  background-color: rgb(103, 128, 159); /* Softer background color */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* tic tac toe board css */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* Simplified grid declaration */
+  grid-template-rows: repeat(3, 100px);
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  gap: 5px; /* Space between squares */
+}
+
+.square {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(162, 250, 30);
+  border: 3px solid black;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.square:hover {
+  background-color: rgb(132, 220, 30); /* Darker shade on hover */
+  transform: scale(1.1); /* Scale effect for interactivity */
+}
+/* Header  */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+  padding: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.player {
+  font-size: 1.5rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 15px 20px;
+  background-color: #f1f1f1;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for button effect */
+  transition: background-color 0.3s ease;
+}
+
+.player:hover {
+  background-color: #e3e3e3;
+}
+
+li {
+  width: 400px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px; /* Add spacing between items */
+}
+
+.reset{
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: red;
+}
+
+.reset:hover{
+  transform: scale(1.1);
+  background-color: rgb(230, 16, 16);
+  cursor: pointer;
+}
+/* Responsive styles */
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+  }
+
+.square {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+  }
+
+header {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+.player {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*  --------------- CSS Form ------------------- */
+div.form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fef7e7;
+}
+
+.container {
+  background-color: white;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="submit"], input[type="reset"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"], input[type="reset"] {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  transform: scale(1.05);
+  background-color: #218838;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* footer */
+.won{
+  display: inline-block;
+  padding: 2rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  border: 5px dotted rgb(156, 0, 0);
+  border-radius: 5px;
+  color: rgb(156, 0, 0);
+}
